@@ -326,55 +326,101 @@
     }
 
 }
-/* =========================================
-   HOMEPAGE HERO — QUALITY WORK / BUILT TO LAST
-   ========================================= */
-.hero{min-height:520px;background:url('hero-house.jpg') center/cover no-repeat;position:relative;overflow:hidden}
-.hero-shade{background:linear-gradient(90deg,rgba(245,246,244,.98) 0%,rgba(245,246,244,.92) 30%,rgba(245,246,244,.42) 48%,rgba(7,21,34,.05) 70%,rgba(7,21,34,.10) 100%)}
-.hero-inner{min-height:520px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative}
-.hero-copy{width:min(600px,52%);padding:46px 0;color:var(--navy)}
-.hero-copy .eyebrow{font-size:14px;color:var(--gold);letter-spacing:3px;margin-bottom:10px}
-.hero h1{font-size:clamp(48px,5.7vw,78px);line-height:.94;letter-spacing:.5px;color:var(--navy);text-transform:uppercase}
-.hero h1 span{font-size:1em;color:var(--gold);display:inline;margin:0}
-.hero h1 em{display:block;font-size:.86em;font-style:italic;letter-spacing:1px;color:var(--navy);margin-top:6px}
-.hero-text{max-width:510px;color:#344250;font-size:17px;font-weight:600;line-height:1.45;margin-top:18px}
-.hero-actions{display:grid;grid-template-columns:repeat(3,minmax(150px,1fr));gap:12px;max-width:760px;margin-top:24px}
-.hero-actions .btn{min-height:58px;padding:10px 14px;font-size:11px;border-radius:5px;text-align:center;line-height:1.25}
-.navy-btn{background:var(--navy);color:#fff;border:1px solid rgba(255,255,255,.55)}
-.navy-btn:hover{background:#132f47}
-.email-btn{box-shadow:0 4px 12px rgba(0,0,0,.12)}
-.hero-trust-badge{width:190px;height:190px;flex:0 0 190px;border:6px solid var(--gold);background:var(--navy);color:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.28);padding:18px;transform:rotate(0deg)}
-.hero-trust-badge:before{content:'';position:absolute}
-.hero-trust-badge .badge-stars{color:var(--gold);font-size:16px;letter-spacing:3px;line-height:1;margin-bottom:10px}
-.hero-trust-badge .badge-stars.bottom{margin:10px 0 0}
-.hero-trust-badge span{font-size:10px;font-weight:800;letter-spacing:1px}
-.hero-trust-badge strong{font-size:26px;line-height:1.05;margin:7px 0;color:#fff}
-.hero-trust-badge small{font-size:9px;font-weight:800;letter-spacing:.8px}
-.trust-strip{display:none}
 
+/* =========================================================
+   HERO + NAVIGATION REFINEMENT
+   Keeps the rest of the site, gallery, services and layout intact.
+========================================================= */
 
-@media(max-width:1000px){
-  .hero{min-height:560px;background-position:58% center}
-  .hero-inner{min-height:560px}
-  .hero-copy{width:min(590px,66%)}
-  .hero-actions{grid-template-columns:repeat(2,minmax(170px,1fr))}
-  .hero-trust-badge{width:165px;height:165px;flex-basis:165px}
-  .hero-trust-badge strong{font-size:22px}
-}
+/* Desktop navigation stays on one clean row. */
+.main-nav{position:relative}
+.nav-inner{max-width:1280px;margin:0 auto;width:94%;justify-content:center;gap:0;overflow:visible}
+.nav-inner>a{padding:0 10px;font-size:10px}
+.nav-inner .nav-cta{margin-left:8px;padding:0 15px}
+
+/* Reference-style hero: light content area on the left, home image on the right. */
+.hero{min-height:520px;background:url('hero-house.jpg') center/cover no-repeat;overflow:hidden}
+.hero-shade{background:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.95) 30%,rgba(255,255,255,.72) 46%,rgba(255,255,255,.08) 68%,rgba(7,21,34,.06) 100%)}
+.hero-inner{min-height:520px;display:flex;align-items:center;position:relative}
+.hero-copy{width:min(560px,48%);padding:34px 0 88px;color:var(--navy)}
+.hero h1{font-size:clamp(52px,5.6vw,86px);line-height:.9;letter-spacing:.5px;color:var(--navy)}
+.hero h1 span{font-size:.72em;color:var(--gold);display:block;margin:7px 0 0}
+.hero h1 em{font-family:Georgia,'Times New Roman',serif;font-size:.62em;font-weight:700;font-style:italic;letter-spacing:2px;color:var(--navy);display:block;margin-top:9px}
+.hero-text{max-width:520px;font-size:16px;line-height:1.55;margin-top:19px;color:#263746;font-weight:600}
+.hero-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:24px;width:min(780px,94vw)}
+.hero-actions .btn{min-height:58px;padding:12px 14px;white-space:nowrap}
+.btn.navy{background:var(--navy);color:#fff;border:2px solid var(--navy)}
+.btn.navy:hover{background:var(--navy-dark)}
+
+.trust-badge{position:absolute;right:4%;bottom:28px;width:164px;height:164px;border:5px solid var(--gold);border-radius:50%;background:rgba(11,32,50,.98);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+.trust-badge small{font-size:10px;font-weight:800;letter-spacing:1px;margin:4px 0}.trust-badge strong{font-size:27px;letter-spacing:1px;line-height:1}.badge-stars{color:var(--gold);font-size:13px;letter-spacing:3px}
+
+/* Remove horizontal scrolling from the mobile navigation. Every link remains visible. */
 @media(max-width:700px){
-  .hero{min-height:650px;background-position:60% center}
-  .hero-shade{background:linear-gradient(180deg,rgba(245,246,244,.96) 0%,rgba(245,246,244,.88) 52%,rgba(7,21,34,.52) 100%)}
-  .hero-inner{min-height:650px;display:block;padding-top:36px}
-  .hero-copy{width:100%;padding:0}
-  .hero-copy .eyebrow{font-size:11px;letter-spacing:2px}
-  .hero h1{font-size:44px}
-  .hero-text{font-size:14px;max-width:100%}
-  .hero-actions{grid-template-columns:1fr;gap:9px;max-width:100%}
-  .hero-actions .btn{width:100%;min-height:52px}
-  .hero-trust-badge{width:135px;height:135px;position:absolute;right:0;bottom:24px;flex-basis:auto;border-width:4px;padding:10px}
-  .hero-trust-badge .badge-stars{font-size:11px;margin-bottom:5px}
-  .hero-trust-badge .badge-stars.bottom{margin-top:5px}
-  .hero-trust-badge span{font-size:7px}
-  .hero-trust-badge strong{font-size:18px;margin:4px 0}
-  .hero-trust-badge small{font-size:7px}
+  .nav-inner{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));min-height:0;padding:0;overflow:visible;justify-content:stretch}
+  .nav-inner>a{width:100%;min-width:0;height:42px;padding:0 4px;font-size:8px;letter-spacing:.2px;text-align:center;border-right:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav-inner>a:nth-child(3n){border-right:0}
+  .nav-inner .nav-cta{height:42px;margin:0;padding:0 4px}
+
+  .hero,.hero-inner{min-height:660px}
+  .hero{background-position:58% center}
+  .hero-shade{background:linear-gradient(180deg,rgba(7,21,34,.14) 0%,rgba(7,21,34,.62) 32%,rgba(7,21,34,.92) 100%)}
+  .hero-inner{display:block;padding-top:38px}
+  .hero-copy{width:100%;padding:0 0 18px;color:#fff}
+  .hero h1{font-size:clamp(46px,12vw,64px);color:#fff;line-height:.92}
+  .hero h1 span{font-size:.68em}.hero h1 em{font-size:.56em;color:#fff}
+  .hero-text{font-size:15px;color:#f1f4f6;max-width:100%;font-weight:500}
+  .hero-actions{grid-template-columns:1fr;gap:10px;width:100%;margin-top:24px}
+  .hero-actions .btn{min-height:58px;width:100%}
+  .trust-badge{right:3%;bottom:24px;width:132px;height:132px;border-width:4px}
+  .trust-badge strong{font-size:22px}.trust-badge small{font-size:8px}.badge-stars{font-size:10px}
+}
+
+@media(max-width:390px){
+  .nav-inner>a{font-size:7px}
+  .hero,.hero-inner{min-height:680px}
+}
+
+/* MOBILE NAVIGATION — keep the original horizontal bar, without scrolling.
+   About Us and Contact are hidden on small screens to keep the remaining
+   navigation choices visible in one row. Desktop navigation is unchanged. */
+@media(max-width:700px){
+  .nav-inner{
+    display:flex;
+    width:100%;
+    min-height:46px;
+    padding:0;
+    overflow:hidden;
+    justify-content:stretch;
+    flex-wrap:nowrap;
+  }
+  .nav-inner>a{
+    display:flex;
+    flex:1 1 0;
+    min-width:0;
+    height:46px;
+    padding:0 3px;
+    font-size:8px;
+    line-height:1.05;
+    letter-spacing:0;
+    white-space:nowrap;
+    text-align:center;
+    border-right:1px solid rgba(255,255,255,.08);
+    border-bottom:0;
+  }
+  /* Hide About Us and Contact on mobile only. */
+  .nav-inner>a:nth-child(6),
+  .nav-inner>a:nth-child(8){display:none;}
+  .nav-inner .nav-cta{
+    flex:1.55 1 0;
+    height:46px;
+    margin:0;
+    padding:0 3px;
+    font-size:7px;
+  }
+  .nav-inner>a:last-child{border-right:0;}
+}
+@media(max-width:390px){
+  .nav-inner>a{font-size:7px;}
+  .nav-inner .nav-cta{font-size:6.5px;}
 }
