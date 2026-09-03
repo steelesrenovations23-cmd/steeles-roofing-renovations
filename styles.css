@@ -463,3 +463,168 @@
   .hero-badge{right:5%;bottom:24px;width:150px;height:150px;border-width:4px;box-shadow:0 6px 18px rgba(0,0,0,.2),0 0 0 6px rgba(11,32,50,.97)}
   .hero-badge span{font-size:23px}.hero-badge strong,.hero-badge em{font-size:8px}.hero-badge .badge-stars{font-size:13px}
 }
+
+
+/* =========================================================
+   FINAL HOME HERO OVERRIDE
+   Home page only: reference-style hero, button row and badge.
+   Gallery/navigation styles above are intentionally untouched.
+========================================================= */
+.hero{
+  min-height:566px;
+  background-position:right center;
+}
+
+.hero-shade{
+  background:
+    linear-gradient(90deg,
+      rgba(250,249,246,.99) 0%,
+      rgba(250,249,246,.98) 28%,
+      rgba(250,249,246,.90) 43%,
+      rgba(250,249,246,.58) 57%,
+      rgba(250,249,246,.18) 73%,
+      rgba(250,249,246,0) 88%),
+    linear-gradient(180deg,rgba(255,255,255,.03),rgba(5,15,24,.08));
+}
+
+.hero-inner{
+  min-height:566px;
+}
+
+.hero-copy{
+  width:min(640px,49%);
+  padding:38px 0 30px;
+}
+
+.hero h1{
+  font-size:clamp(52px,5.05vw,78px);
+  line-height:.88;
+}
+
+.hero-text{
+  max-width:520px;
+  margin-top:18px;
+}
+
+/* Keep the three requested actions in one reference-style row. */
+.hero-actions{
+  display:grid;
+  grid-template-columns:1fr 1.08fr 1fr;
+  gap:12px;
+  width:min(940px,78vw);
+  margin-top:20px;
+}
+
+.hero-actions .btn{
+  min-height:60px;
+}
+
+/* Restore a clean, solid badge.  The old clip-path was clipping the
+   badge on mobile and leaving the stars/text floating by themselves. */
+.hero-badge{
+  right:3%;
+  bottom:30px;
+  width:184px;
+  height:184px;
+  border:5px solid var(--gold);
+  border-radius:50%;
+  background:#0b2032;
+  box-shadow:0 8px 22px rgba(0,0,0,.28);
+  clip-path:none;
+}
+
+.hero-badge strong{
+  color:#fff;
+}
+
+.hero-badge span{
+  color:#fff;
+}
+
+.hero-badge em{
+  color:#fff;
+}
+
+/* Mobile: preserve the same left-to-right hero treatment and use a
+   compact three-button row instead of three oversized stacked buttons. */
+@media(max-width:700px){
+  .hero,
+  .hero-inner{
+    min-height:640px;
+  }
+
+  .hero{
+    background-position:72% center;
+  }
+
+  .hero-shade{
+    background:
+      linear-gradient(90deg,
+        rgba(250,249,246,.98) 0%,
+        rgba(250,249,246,.96) 34%,
+        rgba(250,249,246,.82) 55%,
+        rgba(250,249,246,.46) 74%,
+        rgba(250,249,246,.08) 100%),
+      linear-gradient(180deg,rgba(255,255,255,.04),rgba(7,21,34,.12));
+  }
+
+  .hero-copy{
+    width:100%;
+    padding:34px 0 22px;
+  }
+
+  .hero h1{
+    font-size:clamp(42px,11.8vw,54px);
+    line-height:.91;
+  }
+
+  .hero-text{
+    max-width:100%;
+    font-size:15px;
+    line-height:1.48;
+    margin-top:18px;
+  }
+
+  .hero-actions{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:7px;
+    width:100%;
+    margin-top:20px;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+    min-height:68px;
+    padding:8px 5px;
+    font-size:8.5px;
+    line-height:1.22;
+    letter-spacing:.8px;
+    white-space:normal;
+    text-align:center;
+  }
+
+  .hero-badge{
+    right:5%;
+    bottom:22px;
+    width:150px;
+    height:150px;
+    padding:8px;
+    border-width:4px;
+    background:#0b2032;
+    box-shadow:0 6px 18px rgba(0,0,0,.28);
+  }
+
+  .hero-badge .badge-stars{
+    font-size:13px;
+    letter-spacing:4px;
+  }
+
+  .hero-badge strong,
+  .hero-badge em{
+    font-size:8px;
+  }
+
+  .hero-badge span{
+    font-size:22px;
+  }
+}
