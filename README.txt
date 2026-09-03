@@ -1,14 +1,18 @@
-STEELE'S ROOFING & RENOVATIONS - CLEAN WEBSITE PACKAGE
+STEELE'S ROOFING & RENOVATIONS
 
-This package contains a clean replacement homepage and stylesheet.
+GitHub Pages static website.
 
-UPLOAD TO YOUR EXISTING GITHUB REPOSITORY:
-1. Upload/replace index.html
-2. Upload/replace styles.css
-3. Keep gallery.html and gallery.js
-4. Keep project-01.jpeg through project-09.jpeg
-5. Commit the changes.
+Main files:
+- index.html
+- styles.css
+- gallery.html
+- gallery.js
 
-The homepage uses project-09.jpeg as the hero image and your existing project photos throughout the page.
+Images:
+- logo.png: official logo
+- hero-house.jpg: homepage hero image
+- about-truck.jpg: about section image
+- roofing.jpg through renovations.jpg: service images
+- project-01.jpeg through project-09.jpeg: customer project gallery
 
-Do not rename the image files unless you also update the matching filenames in index.html.
+Publish with GitHub Pages from the main branch and repository root.
