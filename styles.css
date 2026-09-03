@@ -559,3 +559,147 @@
   .hero-badge span{font-size:19px}
   .hero-badge em{font-size:7px;margin:3px 0 5px}
 }
+
+
+/* =========================================
+   HOME HERO — REFERENCE COMPOSITION MATCH
+   Uses the supplied reference as the source of truth.
+   Only affects the Home hero; navigation/Gallery remain unchanged.
+========================================= */
+.hero{
+  min-height:566px;
+  background-position:right center;
+}
+.hero-inner{
+  min-height:566px;
+}
+.hero-shade{
+  background:linear-gradient(90deg,
+    rgba(250,249,246,.995) 0%,
+    rgba(250,249,246,.99) 29%,
+    rgba(250,249,246,.90) 43%,
+    rgba(250,249,246,.60) 55%,
+    rgba(250,249,246,.22) 67%,
+    rgba(250,249,246,0) 79%);
+}
+.hero-copy{
+  width:min(650px,48%);
+  padding:42px 0 0;
+}
+.eyebrow{
+  font-size:13px;
+  letter-spacing:3.2px;
+  margin-bottom:10px;
+}
+.hero h1{
+  font-size:clamp(48px,4.7vw,76px);
+  line-height:.88;
+}
+.hero h1 .hero-line-gold{margin-top:7px}
+.hero h1 .hero-line-script{
+  font-size:.74em;
+  margin-top:10px;
+}
+.hero-text{
+  max-width:500px;
+  margin-top:15px;
+  font-size:16px;
+  line-height:1.48;
+}
+.hero-actions{
+  grid-template-columns:1fr 1fr 1fr;
+  width:min(870px,70vw);
+  gap:14px;
+  margin-top:14px;
+}
+.hero-actions .btn{
+  min-height:58px;
+  padding:11px 14px;
+}
+.hero-badge{
+  right:3.2%;
+  bottom:34px;
+  width:190px;
+  height:190px;
+}
+
+/* Phone: retain the reference's horizontal composition instead of stacking
+   the calls-to-action into a tall column. */
+@media(max-width:700px){
+  .hero{
+    min-height:500px;
+    background-position:72% center;
+  }
+  .hero-inner{
+    min-height:500px;
+    height:500px;
+  }
+  .hero-shade{
+    background:linear-gradient(90deg,
+      rgba(250,249,246,.995) 0%,
+      rgba(250,249,246,.985) 30%,
+      rgba(250,249,246,.90) 47%,
+      rgba(250,249,246,.56) 62%,
+      rgba(250,249,246,.18) 76%,
+      rgba(250,249,246,0) 92%);
+  }
+  .hero-copy{
+    width:100%;
+    padding:32px 0 0;
+  }
+  .eyebrow{
+    font-size:10px;
+    letter-spacing:2.5px;
+    margin-bottom:9px;
+  }
+  .hero h1{
+    font-size:clamp(38px,10.4vw,54px);
+    line-height:.9;
+  }
+  .hero h1 .hero-line-gold{margin-top:5px}
+  .hero h1 .hero-line-script{
+    font-size:.68em;
+    margin-top:7px;
+  }
+  .hero-text{
+    max-width:88%;
+    margin-top:13px;
+    font-size:14px;
+    line-height:1.42;
+  }
+  .hero-actions{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    width:100%;
+    gap:8px;
+    margin-top:15px;
+  }
+  .hero-actions .btn{
+    min-height:52px;
+    padding:7px 5px;
+    font-size:8px;
+    letter-spacing:.65px;
+  }
+  .hero-badge{
+    right:5%;
+    bottom:22px;
+    width:128px;
+    height:128px;
+    padding:7px;
+    border-width:4px;
+    box-shadow:0 5px 14px rgba(0,0,0,.22);
+  }
+  .hero-badge .badge-stars{font-size:10px;letter-spacing:2px}
+  .hero-badge strong{font-size:7px;margin:4px 0 1px}
+  .hero-badge span{font-size:18px}
+  .hero-badge em{font-size:7px;margin:3px 0 4px}
+}
+
+@media(max-width:430px){
+  .hero,.hero-inner{min-height:470px;height:470px}
+  .hero-copy{padding-top:27px}
+  .hero h1{font-size:clamp(34px,10vw,46px)}
+  .hero-text{font-size:13px;max-width:86%}
+  .hero-actions .btn{font-size:7px;letter-spacing:.4px}
+  .hero-badge{width:112px;height:112px;right:4%;bottom:18px}
+  .hero-badge span{font-size:16px}
+}
