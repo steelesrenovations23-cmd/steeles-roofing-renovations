@@ -11,3 +11,318 @@
 /* FOOTER */footer{background:var(--navy-dark);color:#fff;padding-top:32px}.footer-grid{display:grid;grid-template-columns:1.2fr .7fr 1.2fr;gap:30px}.footer-brand img{width:200px;height:70px;object-fit:contain;object-position:left center;filter:none}.footer-brand small{display:block;color:var(--gold);font-size:9px;letter-spacing:1px;margin-top:8px}.footer-grid b{display:block;color:var(--gold);font-size:11px;letter-spacing:1px;margin-bottom:9px}.footer-grid a,.footer-grid span{display:block;color:#d5dbe0;font-size:12px;margin:6px 0}.copyright{text-align:center;border-top:1px solid rgba(255,255,255,.1);margin-top:25px;padding:15px;color:#89939c;font-size:10px}
 @media(max-width:1100px){.services-grid{grid-template-columns:repeat(4,1fr)}.about-grid{grid-template-columns:1fr 1fr}.why-copy{grid-column:1/-1}.recent-grid{grid-template-columns:repeat(3,1fr)}.nav-inner{justify-content:flex-start;overflow-x:auto}.nav-inner>a{flex-shrink:0}.full-gallery{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.wrap{width:93%}.header-top-inner{min-height:0;padding:10px 0;gap:10px}.brand img{width:150px;height:60px}.header-contact{gap:4px;flex-direction:column;align-items:flex-start;min-width:0}.header-contact b{font-size:8px}.header-contact span{font-size:10px;white-space:nowrap;max-width:180px;overflow:hidden;text-overflow:ellipsis}.nav-inner{padding:0 8px}.nav-inner>a{height:46px;padding:0 9px;font-size:9px}.nav-inner .nav-cta{height:34px;padding:0 13px}.hero,.hero-inner{min-height:530px}.hero-shade{background:linear-gradient(180deg,rgba(5,15,24,.94),rgba(5,15,24,.68))}.hero-copy{width:100%;padding:38px 0}.hero h1{font-size:44px}.hero-text{font-size:14px;line-height:1.55}.hero-actions{display:grid;grid-template-columns:1fr;gap:9px}.hero-actions .btn{width:100%}.trust-grid{grid-template-columns:repeat(2,1fr)}.trust-grid div{padding:11px 9px}.trust-grid i{font-size:18px}.trust-grid span{font-size:9px}.section{padding:38px 0}.heading{margin-bottom:20px}.heading h2{font-size:25px}.services-grid{grid-template-columns:repeat(2,1fr);gap:9px}.services-grid img{height:125px}.services-grid article div{padding:10px 5px 12px}.services-grid h3{font-size:11px}.services-grid p{font-size:9px}.about-section{padding:14px 0 38px}.about-grid,.contact-grid,.footer-grid{grid-template-columns:1fr}.about-copy{padding:23px}.about-copy h2,.why-copy h2{font-size:23px}.about-photo{min-height:270px}.why-copy{grid-column:auto;padding:25px 22px}.recent-grid{grid-template-columns:repeat(2,1fr);gap:9px}.recent-grid img{height:145px}.recent-grid a:last-child{grid-column:1/-1}.recent-grid a:last-child img{height:190px}.area-inner{grid-template-columns:1fr;text-align:center;gap:10px}.area-icon{display:none}.area h2{font-size:21px}.area .btn{width:100%}.contact{padding:38px 0}.contact h2{font-size:25px}.contact-number{font-size:18px}.contact-card{padding:22px}.contact-card .btn{width:100%;margin:5px 0}.gallery-page{padding:32px 0 40px}.full-gallery{grid-template-columns:repeat(2,1fr);gap:9px}.full-gallery img{height:160px}.full-gallery a:last-child{grid-column:1/-1}.full-gallery a:last-child img{height:220px}.footer-grid{gap:22px}.footer-brand img{width:190px}.copyright{margin-top:20px}}
+/* =========================================
+   GALLERY PAGE
+========================================= */
+
+.gallery-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 30px 80px;
+}
+
+
+/* BACK TO HOME */
+
+.back-home {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #1d3448;
+
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.back-home:hover {
+    opacity: 0.65;
+}
+
+
+/* GALLERY INTRO */
+
+.gallery-intro {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+.gallery-tagline {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: #b18a45;
+
+    margin-bottom: 10px;
+}
+
+
+.gallery-intro h1 {
+    font-size: 46px;
+
+    letter-spacing: 2px;
+
+    color: #273c50;
+
+    margin-bottom: 12px;
+}
+
+
+.gallery-intro p:last-child {
+    font-size: 20px;
+
+    color: #5f6972;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   JOB SECTIONS
+========================================= */
+
+.job-section {
+
+    margin-bottom: 80px;
+
+    padding-bottom: 70px;
+
+    border-bottom: 2px solid #dedede;
+}
+
+
+/* Remove line from final project */
+
+.job-section:last-child {
+    border-bottom: none;
+}
+
+
+/* PROJECT HEADING */
+
+.job-heading {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.job-number {
+
+    display: block;
+
+    color: #b18a45;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+.job-heading h2 {
+
+    color: #273c50;
+
+    font-size: 30px;
+
+    margin: 0;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   PHOTO GRID
+========================================= */
+
+.job-gallery {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+
+.job-gallery a {
+
+    display: block;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+}
+
+
+.job-gallery img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+
+.job-gallery a:hover img {
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+
+    .gallery-page {
+
+        padding: 30px 20px 60px;
+    }
+
+
+    .back-home {
+
+        font-size: 16px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .gallery-intro {
+
+        margin-bottom: 45px;
+    }
+
+
+    .gallery-tagline {
+
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    .gallery-intro h1 {
+
+        font-size: 34px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .gallery-intro p:last-child {
+
+        font-size: 17px;
+
+        line-height: 1.5;
+    }
+
+
+    .job-section {
+
+        margin-bottom: 55px;
+
+        padding-bottom: 50px;
+    }
+
+
+    .job-heading {
+
+        margin-bottom: 22px;
+    }
+
+
+    .job-heading h2 {
+
+        font-size: 22px;
+
+        line-height: 1.3;
+    }
+
+
+    .job-number {
+
+        font-size: 12px;
+    }
+
+
+    .job-gallery {
+
+        gap: 10px;
+    }
+
+
+    .job-gallery img {
+
+        height: 190px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+
+    .gallery-page {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    .gallery-intro h1 {
+
+        font-size: 30px;
+    }
+
+
+    .job-heading h2 {
+
+        font-size: 20px;
+    }
+
+
+    .job-gallery {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .job-gallery img {
+
+        height: auto;
+
+        min-height: 220px;
+
+        object-fit: cover;
+    }
+
+}
