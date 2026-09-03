@@ -464,167 +464,98 @@
   .hero-badge span{font-size:23px}.hero-badge strong,.hero-badge em{font-size:8px}.hero-badge .badge-stars{font-size:13px}
 }
 
-
-/* =========================================================
-   FINAL HOME HERO OVERRIDE
-   Home page only: reference-style hero, button row and badge.
-   Gallery/navigation styles above are intentionally untouched.
-========================================================= */
+/* =========================================
+   FINAL HOME HERO TIGHTENING
+   Home page only — keeps Gallery and navigation unchanged
+========================================= */
 .hero{
-  min-height:566px;
-  background-position:right center;
+  min-height:520px;
 }
-
-.hero-shade{
-  background:
-    linear-gradient(90deg,
-      rgba(250,249,246,.99) 0%,
-      rgba(250,249,246,.98) 28%,
-      rgba(250,249,246,.90) 43%,
-      rgba(250,249,246,.58) 57%,
-      rgba(250,249,246,.18) 73%,
-      rgba(250,249,246,0) 88%),
-    linear-gradient(180deg,rgba(255,255,255,.03),rgba(5,15,24,.08));
-}
-
 .hero-inner{
-  min-height:566px;
+  min-height:520px;
 }
-
+.hero-shade{
+  background:linear-gradient(90deg,
+    rgba(250,249,246,.985) 0%,
+    rgba(250,249,246,.965) 27%,
+    rgba(250,249,246,.82) 43%,
+    rgba(250,249,246,.48) 58%,
+    rgba(250,249,246,.16) 74%,
+    rgba(250,249,246,0) 90%);
+}
 .hero-copy{
-  width:min(640px,49%);
-  padding:38px 0 30px;
+  width:min(650px,52%);
+  padding:38px 0 24px;
 }
-
-.hero h1{
-  font-size:clamp(52px,5.05vw,78px);
-  line-height:.88;
-}
-
-.hero-text{
-  max-width:520px;
+.hero-actions{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  width:min(790px,72vw);
+  gap:12px;
   margin-top:18px;
 }
-
-/* Keep the three requested actions in one reference-style row. */
-.hero-actions{
-  display:grid;
-  grid-template-columns:1fr 1.08fr 1fr;
-  gap:12px;
-  width:min(940px,78vw);
-  margin-top:20px;
-}
-
 .hero-actions .btn{
-  min-height:60px;
+  min-height:58px;
+  padding:12px 14px;
 }
-
-/* Restore a clean, solid badge.  The old clip-path was clipping the
-   badge on mobile and leaving the stars/text floating by themselves. */
 .hero-badge{
-  right:3%;
-  bottom:30px;
-  width:184px;
-  height:184px;
-  border:5px solid var(--gold);
-  border-radius:50%;
-  background:#0b2032;
-  box-shadow:0 8px 22px rgba(0,0,0,.28);
-  clip-path:none;
+  right:4%;
+  bottom:22px;
+  width:172px;
+  height:172px;
 }
 
-.hero-badge strong{
-  color:#fff;
-}
-
-.hero-badge span{
-  color:#fff;
-}
-
-.hero-badge em{
-  color:#fff;
-}
-
-/* Mobile: preserve the same left-to-right hero treatment and use a
-   compact three-button row instead of three oversized stacked buttons. */
 @media(max-width:700px){
-  .hero,
-  .hero-inner{
-    min-height:640px;
+  /* Keep the corrected navigation exactly as-is. */
+  .hero,.hero-inner{
+    min-height:535px;
   }
-
   .hero{
-    background-position:72% center;
+    background-position:68% center;
   }
-
   .hero-shade{
-    background:
-      linear-gradient(90deg,
-        rgba(250,249,246,.98) 0%,
-        rgba(250,249,246,.96) 34%,
-        rgba(250,249,246,.82) 55%,
-        rgba(250,249,246,.46) 74%,
-        rgba(250,249,246,.08) 100%),
-      linear-gradient(180deg,rgba(255,255,255,.04),rgba(7,21,34,.12));
+    background:linear-gradient(90deg,
+      rgba(250,249,246,.985) 0%,
+      rgba(250,249,246,.97) 31%,
+      rgba(250,249,246,.84) 50%,
+      rgba(250,249,246,.52) 66%,
+      rgba(250,249,246,.18) 82%,
+      rgba(250,249,246,.04) 100%);
   }
-
   .hero-copy{
     width:100%;
-    padding:34px 0 22px;
+    padding:34px 0 18px;
   }
-
   .hero h1{
-    font-size:clamp(42px,11.8vw,54px);
-    line-height:.91;
+    font-size:clamp(40px,11.6vw,56px);
+    line-height:.9;
   }
-
   .hero-text{
-    max-width:100%;
     font-size:15px;
     line-height:1.48;
-    margin-top:18px;
+    margin-top:17px;
   }
-
   .hero-actions{
     grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:7px;
     width:100%;
+    gap:8px;
     margin-top:20px;
   }
-
   .hero-actions .btn{
-    width:100%;
-    min-height:68px;
-    padding:8px 5px;
+    min-height:52px;
+    padding:8px 6px;
     font-size:8.5px;
-    line-height:1.22;
     letter-spacing:.8px;
-    white-space:normal;
-    text-align:center;
   }
-
   .hero-badge{
     right:5%;
-    bottom:22px;
-    width:150px;
-    height:150px;
-    padding:8px;
+    bottom:18px;
+    width:132px;
+    height:132px;
     border-width:4px;
-    background:#0b2032;
-    box-shadow:0 6px 18px rgba(0,0,0,.28);
+    box-shadow:0 5px 15px rgba(0,0,0,.18);
   }
-
-  .hero-badge .badge-stars{
-    font-size:13px;
-    letter-spacing:4px;
-  }
-
-  .hero-badge strong,
-  .hero-badge em{
-    font-size:8px;
-  }
-
-  .hero-badge span{
-    font-size:22px;
-  }
+  .hero-badge .badge-stars{font-size:11px;letter-spacing:3px}
+  .hero-badge strong{font-size:7px;margin:5px 0 1px}
+  .hero-badge span{font-size:19px}
+  .hero-badge em{font-size:7px;margin:3px 0 5px}
 }
