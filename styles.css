@@ -327,275 +327,54 @@
 
 }
 /* =========================================
-   GALLERY HEADER / NAVIGATION
-========================================= */
+   HOMEPAGE HERO — QUALITY WORK / BUILT TO LAST
+   ========================================= */
+.hero{min-height:520px;background:url('hero-house.jpg') center/cover no-repeat;position:relative;overflow:hidden}
+.hero-shade{background:linear-gradient(90deg,rgba(245,246,244,.98) 0%,rgba(245,246,244,.92) 30%,rgba(245,246,244,.42) 48%,rgba(7,21,34,.05) 70%,rgba(7,21,34,.10) 100%)}
+.hero-inner{min-height:520px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative}
+.hero-copy{width:min(600px,52%);padding:46px 0;color:var(--navy)}
+.hero-copy .eyebrow{font-size:14px;color:var(--gold);letter-spacing:3px;margin-bottom:10px}
+.hero h1{font-size:clamp(48px,5.7vw,78px);line-height:.94;letter-spacing:.5px;color:var(--navy);text-transform:uppercase}
+.hero h1 span{font-size:1em;color:var(--gold);display:inline;margin:0}
+.hero h1 em{display:block;font-size:.86em;font-style:italic;letter-spacing:1px;color:var(--navy);margin-top:6px}
+.hero-text{max-width:510px;color:#344250;font-size:17px;font-weight:600;line-height:1.45;margin-top:18px}
+.hero-actions{display:grid;grid-template-columns:repeat(3,minmax(150px,1fr));gap:12px;max-width:760px;margin-top:24px}
+.hero-actions .btn{min-height:58px;padding:10px 14px;font-size:11px;border-radius:5px;text-align:center;line-height:1.25}
+.navy-btn{background:var(--navy);color:#fff;border:1px solid rgba(255,255,255,.55)}
+.navy-btn:hover{background:#132f47}
+.email-btn{box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.hero-trust-badge{width:190px;height:190px;flex:0 0 190px;border:6px solid var(--gold);background:var(--navy);color:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.28);padding:18px;transform:rotate(0deg)}
+.hero-trust-badge:before{content:'';position:absolute}
+.hero-trust-badge .badge-stars{color:var(--gold);font-size:16px;letter-spacing:3px;line-height:1;margin-bottom:10px}
+.hero-trust-badge .badge-stars.bottom{margin:10px 0 0}
+.hero-trust-badge span{font-size:10px;font-weight:800;letter-spacing:1px}
+.hero-trust-badge strong{font-size:26px;line-height:1.05;margin:7px 0;color:#fff}
+.hero-trust-badge small{font-size:9px;font-weight:800;letter-spacing:.8px}
+.trust-strip{display:none}
 
-.site-header {
-  width: 100%;
-  background: #ffffff;
+
+@media(max-width:1000px){
+  .hero{min-height:560px;background-position:58% center}
+  .hero-inner{min-height:560px}
+  .hero-copy{width:min(590px,66%)}
+  .hero-actions{grid-template-columns:repeat(2,minmax(170px,1fr))}
+  .hero-trust-badge{width:165px;height:165px;flex-basis:165px}
+  .hero-trust-badge strong{font-size:22px}
 }
-
-
-/* =========================================
-   TOP HEADER
-========================================= */
-
-.header-top {
-  background: #ffffff;
-  border-bottom: 1px solid #e3e3e3;
-}
-
-.header-top-inner {
-  min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 35px;
-}
-
-
-/* =========================================
-   LOGO
-========================================= */
-
-.brand {
-  display: block;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.brand img {
-  display: block;
-  width: 260px;
-  max-width: 100%;
-  height: auto;
-}
-
-
-/* =========================================
-   CONTACT BUTTONS
-========================================= */
-
-.header-contact {
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-end;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-
-.header-contact-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  min-width: 205px;
-
-  padding: 15px 20px;
-
-  background: #0b2135;
-
-  color: #ffffff;
-
-  text-decoration: none;
-
-  border-radius: 4px;
-
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
-}
-
-
-.header-contact-btn:hover {
-  background: #b58a45;
-  transform: translateY(-2px);
-}
-
-
-.contact-label {
-  display: block;
-
-  margin-bottom: 5px;
-
-  color: #d4aa62;
-
-  font-size: 12px;
-
-  font-weight: 800;
-
-  letter-spacing: 1.5px;
-
-  line-height: 1;
-}
-
-
-.contact-value {
-  display: block;
-
-  color: #ffffff;
-
-  font-size: 15px;
-
-  font-weight: 600;
-
-  line-height: 1.3;
-}
-
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
-.main-nav {
-  width: 100%;
-  background: #0b2135;
-}
-
-
-.main-nav .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  padding-top: 12px;
-  padding-bottom: 12px;
-
-  flex-wrap: wrap;
-}
-
-
-.main-nav a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 12px 20px;
-
-  color: #ffffff;
-
-  background: transparent;
-
-  text-decoration: none;
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  letter-spacing: 1px;
-
-  border: 1px solid rgba(255, 255, 255, 0.35);
-
-  border-radius: 3px;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
-}
-
-
-.main-nav a:hover {
-  background: #b58a45;
-  border-color: #b58a45;
-  color: #ffffff;
-}
-
-
-.main-nav a.active {
-  background: #b58a45;
-  border-color: #b58a45;
-  color: #ffffff;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 850px) {
-
-  .header-top-inner {
-    min-height: auto;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-
-
-  .brand img {
-    width: 250px;
-  }
-
-
-  .header-contact {
-    justify-content: center;
-  }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-  .header-top-inner {
-    gap: 20px;
-  }
-
-
-  .brand img {
-    width: 100%;
-    max-width: 330px;
-  }
-
-
-  .header-contact {
-    width: 100%;
-
-    flex-direction: column;
-
-    gap: 10px;
-  }
-
-
-  .header-contact-btn {
-    width: 100%;
-
-    min-width: 0;
-
-    text-align: center;
-
-    align-items: center;
-  }
-
-
-  .main-nav .wrap {
-    justify-content: center;
-
-    gap: 8px;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-
-  .main-nav a {
-    flex: 1 1 calc(50% - 8px);
-
-    padding: 11px 8px;
-
-    font-size: 11px;
-
-    letter-spacing: 0.5px;
-  }
-
+@media(max-width:700px){
+  .hero{min-height:650px;background-position:60% center}
+  .hero-shade{background:linear-gradient(180deg,rgba(245,246,244,.96) 0%,rgba(245,246,244,.88) 52%,rgba(7,21,34,.52) 100%)}
+  .hero-inner{min-height:650px;display:block;padding-top:36px}
+  .hero-copy{width:100%;padding:0}
+  .hero-copy .eyebrow{font-size:11px;letter-spacing:2px}
+  .hero h1{font-size:44px}
+  .hero-text{font-size:14px;max-width:100%}
+  .hero-actions{grid-template-columns:1fr;gap:9px;max-width:100%}
+  .hero-actions .btn{width:100%;min-height:52px}
+  .hero-trust-badge{width:135px;height:135px;position:absolute;right:0;bottom:24px;flex-basis:auto;border-width:4px;padding:10px}
+  .hero-trust-badge .badge-stars{font-size:11px;margin-bottom:5px}
+  .hero-trust-badge .badge-stars.bottom{margin-top:5px}
+  .hero-trust-badge span{font-size:7px}
+  .hero-trust-badge strong{font-size:18px;margin:4px 0}
+  .hero-trust-badge small{font-size:7px}
 }
